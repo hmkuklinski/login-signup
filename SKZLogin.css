@@ -1,0 +1,156 @@
+
+/*allows us to use a new font for the title Login screen!*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "poppins", sans-serif;
+}
+
+section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    width:100%;
+    background: url("https://64.media.tumblr.com/b203e9fc756182cf382eab07d4631fd5/3bbdadbc307a9178-bf/s2048x3072/ef8a919f6d41857bb3a2a24584783311ab4d3393.pnj")no-repeat;
+    background-position:center;
+    background-size:cover;
+
+}   
+
+/*positions the login box */
+.form-box{
+   position:relative;
+   width: 400px;
+   height:450px;
+   background:transparent;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/*login Title*/
+h2 {
+    font-size:2em;
+    color: #fff;
+    text-align: center;
+}
+
+/*text input formatting*/
+.inputbox{
+    position: relative;
+    margin: 30px 0px;
+    width: 310px;
+    border-bottom:2px solid #fff;
+}
+
+/*formatting for email and password titles:
+-keep within the input box
+-want it to go upwards after we click on the input box
+-smooth transition: not fast
+
+*/
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform:translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events:none;
+    transition: .4s;
+}
+/*how high it goes:
+will go 10 px beyond the zero in an upward direction (negative number)
+will go 10 px in a downward direction if the number is positive
+the greater the number, the further it will go up/down
+*/
+input:focus ~ label,
+input:valid ~ label{
+    top: -10px;
+}
+
+
+.inputbox input {
+    width:100%;
+    height: 50px;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color:#fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size:1.2em;
+    top: 20px;
+}
+
+/*for the Remember me?*/
+.forget {
+    margin: -15px 0 px 15px;
+    font-size:0.9em;
+    color:#ffffff;
+    display:flex;
+    justify-content: center;
+}
+
+/*space between the checkmark and the Remember me*/
+.forget label input{
+    margin-right: 5px;
+}
+
+/*for password reset link:
+no underline until we hover over it!
+*/
+.forget label a {
+    color:#fff;
+    text-decoration:none;
+}
+
+.forget label a:hover {
+    text-decoration:underline;
+}
+
+/*button contents:
+-goes the entire way around our box
+border radius: creates a rounded effect on our box
+want the cursor to become a pointer when we hover over the button
+font is slightly bolded
+
+*/
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: 0.9em;
+    color:#fff;
+    text-align:center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration:none;
+    color:#ffffff;
+    font-weight: 550;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+    color: #ee5353;
+}
